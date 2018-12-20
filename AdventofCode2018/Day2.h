@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include "Timer.h"
 
 namespace day2
 {
@@ -27,6 +28,7 @@ namespace day2
 		//{
 		//	std::cout << s << std::endl;
 		//}
+		Timer timer;
 
 		int twotimes = 0;
 		int threetimes = 0;
@@ -58,7 +60,7 @@ namespace day2
 		int cheksum = twotimes * threetimes;
 
 		std::cout << cheksum << std::endl;
-
+		std::cout << timer.Mark() << std::endl;
 		//part 2
 
 		std::string commonletters = "";
@@ -90,7 +92,7 @@ namespace day2
 				break;
 		}
 		std::cout << commonletters << std::endl;
-
+		std::cout << timer.Mark() << std::endl;
 
 		std::cin.get();
 	}
