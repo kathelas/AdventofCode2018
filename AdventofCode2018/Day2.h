@@ -8,9 +8,9 @@
 
 namespace day2
 {
-	void day2()
+	std::vector<std::string> ReadInput( const char* filename )
 	{
-		std::ifstream inputstream( "Day2.txt" );
+		std::ifstream inputstream( filename );
 		std::vector<std::string> input;
 		if( inputstream.is_open() )
 		{
@@ -23,7 +23,15 @@ namespace day2
 				}
 			}
 		}
+		return input;
+	}
 
+	void day2()
+	{
+		std::cout << "Day2:" << std::endl;
+
+		std::vector<std::string> input = ReadInput( "Day2.txt" );
+		
 		//for( auto s : input )
 		//{
 		//	std::cout << s << std::endl;
@@ -60,7 +68,7 @@ namespace day2
 		int cheksum = twotimes * threetimes;
 
 		std::cout << cheksum << std::endl;
-		std::cout << timer.Mark() << std::endl;
+		timer.Print();
 		//part 2
 
 		std::string commonletters = "";
@@ -92,9 +100,8 @@ namespace day2
 				break;
 		}
 		std::cout << commonletters << std::endl;
-		std::cout << timer.Mark() << std::endl;
+		timer.Print();
 
-		std::cin.get();
 	}
 
 
