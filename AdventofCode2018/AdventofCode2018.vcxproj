@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="Day2.h" />
     <ClInclude Include="Day3.h" />
+    <ClInclude Include="Day4.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Timer.h" />
   </ItemGroup>
